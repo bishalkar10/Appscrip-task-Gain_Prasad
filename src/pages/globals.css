@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Basic styles for the checkbox */
+.custom-checkbox {
+  appearance: none;
+  border: 0.75px solid black;
+  height: 18px;
+  width: 18px;
+}
+
+/* Custom checkmark using a pseudo-element */
+.custom-checkbox:checked:after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 8px;
+  width: 16px;
+  left: 0;
+  top: 7px;
+  border: 2px solid black;
+  border-width: 0 0 2px 2px;
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-widht: 640px) {
+  .custom-checkbox:checked:after {
+    top: 5px;
+  }
+}
+@font-face {
+  font-family: "Simplon";
+  font-weight: 700;
+  src: url("/fonts/SimplonNorm-Bold-WebTrial.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Simplon";
+  font-weight: 400;
+  src: url("/fonts/SimplonNorm-Regular-WebTrial.woff") format("woff");
+}
+
+html {
+  font-family: "Simplon", sans-serif;
+}
