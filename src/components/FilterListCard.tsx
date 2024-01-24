@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import RenderFilterList from "./RenderFilterList";
+import "../styles/filter-list-card.css";
 
 export default function FilterListCard() {
   // filters list to be rendered
@@ -18,8 +19,8 @@ export default function FilterListCard() {
   ];
 
   return (
-    <div className="filterList w-full absolute sm:static bg-white pr-8 sm:p-0">
-      <label className="relative flex gap-2 items-center uppercase font-bold text-primary text-sm sm:text-base md:text-lg">
+    <div className="filterList">
+      <label className="customizable">
         <input type="checkbox" className="custom-checkbox" />
         Customizable
       </label>

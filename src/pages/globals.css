@@ -2,23 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-color: #252020;
+}
 /* Basic styles for the checkbox */
 .custom-checkbox {
   appearance: none;
+  position: relative;
   border: 0.75px solid black;
-  height: 18px;
-  width: 18px;
+  height: 1.125rem;
+  width: 1.125rem;
 }
 
 /* Custom checkmark using a pseudo-element */
-.custom-checkbox:checked:after {
+.custom-checkbox:checked::after {
   position: absolute;
   display: block;
   content: "";
-  height: 8px;
-  width: 16px;
+  height: 0.5rem;
+  width: 1rem;
   left: 0;
-  top: 7px;
+  top: 0.2rem;
   border: 2px solid black;
   border-width: 0 0 2px 2px;
   transform: rotate(-45deg);
@@ -43,4 +47,12 @@
 
 html {
   font-family: "Simplon", sans-serif;
+}
+
+.toggle-icon {
+  transform: rotate(90deg);
+}
+
+.rotated-icon {
+  transform: rotate(270deg);
 }

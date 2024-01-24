@@ -1,27 +1,28 @@
 import React from "react";
+import "../styles/navbar.css";
+
 export default function Navbar() {
   return (
     <nav>
-      <ul className="w-full hidden md:flex items-center justify-center gap-16">
-        <li className="font-bold text-primary uppercase tracking-[1px]">
-          SHOP
+      <ul className="large-nav">
+        <li>
+          <a href="#">Shop</a>
         </li>
-        <li className="font-bold text-primary uppercase tracking-[1px]">
-          SKILLS
+        <li>
+          <a href="#">Skills</a>
         </li>
-        <li className="font-bold text-primary uppercase tracking-[1px]">
-          STORIES
+        <li>
+          <a href="#">Stories</a>
         </li>
-        <li className="font-bold text-primary uppercase tracking-[1px]">
-          ABOUT
+        <li>
+          <a href="#">About</a>
         </li>
-        <li className="font-bold text-primary uppercase tracking-[1px]">
-          CONTACT US
+        <li>
+          <a href="#">Contact Us</a>
         </li>
       </ul>
-      <ul className="md:hidden flex items-center justify-start gap-2 text-[#BFC8CD]">
-        <li className="text-xs uppercase">HOME</li> |
-        <li className="text-xs uppercase text-primary">SHOP</li>
+      <ul className="mobile-nav">
+        <li>Home</li> |<li className="active">Shop</li>
       </ul>
     </nav>
   );

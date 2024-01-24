@@ -1,0 +1,75 @@
+.filter-sidebar {
+	border-bottom: 1px solid #e5e5e5;
+	padding: 0.75rem 0;
+}
+
+/* flex items-center justify-between font-bold text-primary text-base sm:text-lg*/
+.filter-sidebar .category-name {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-weight: bold;
+	color: var(--primary-color);
+}
+.category-name > .icon {
+	height: 1rem;
+	width: auto;
+	transition: transform 0.3s;
+}
+
+.filter-sidebar .selected-filters {
+	color: var(--primary-color);
+	padding: 0.5rem 0;
+}
+
+.filter-sidebar .unselect-btn {
+	color: #bfc8cd;
+	text-decoration: underline;
+	padding-bottom: 1.5rem;
+}
+
+.filter-sidebar .subList {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	color: var(--primary-color);
+}
+
+.filter-sidebar .subList.flex {
+	display: flex;
+}
+
+.filter-sidebar .subList.hidden {
+	display: none;
+}
+
+.subList li label {
+	position: relative;
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	font-size: 0.875rem;
+}
+
+/*
+.toggle-icon and .rotated-icon style is declared in global.css file
+}*/
+
+@media (width > 40rem) {
+	.filter-sidebar {
+		padding: 1.5rem 0;
+	}
+	.filter-sidebar .category-name {
+		font-size: 1.25rem;
+	}
+	.filter-sidebar .selected-filters {
+		font-size: 1.25rem;
+		padding-bottom: 1.5rem;
+	}
+	.filter-sidebar .subList {
+		gap: 1.5rem;
+	}
+	.subList li label {
+		font-size: 1rem;
+	}
+}

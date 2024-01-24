@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import "../styles/render-filter-list.css";
 
 interface RenderFilterListProps {
   label: string;
@@ -24,8 +25,8 @@ export default function RenderFilterList({
     // Find the closest parent that contains the ul as its descendant
     const parentContainer = closestDiv?.parentElement;
     const ulElement = parentContainer?.querySelector(".subList");
-    icon?.classList.toggle("rotate-90");
-    icon?.classList.toggle("rotate-270");
+    icon?.classList.toggle("toggle-icon");
+    icon?.classList.toggle("rotated-icon");
 
     if (ulElement && ulElement.tagName === "UL") {
       // Toggle between hidden and flex
@@ -68,32 +69,27 @@ export default function RenderFilterList({
   };
 
   return (
-    <li className="border-b border-solid border-[-#E5E5E5] py-3 sm:py-6">
-      <div className="flex items-center justify-between font-bold text-primary text-base sm:text-lg">
+    <li className="filter-sidebar">
+      <div className="category-name">
         {label.charAt(0).toUpperCase() + label.slice(1)}
         <FontAwesomeIcon
           icon={faAngleRight}
           onClick={hideSubList}
-          className="transition-transform transform rotate-90 h-4"
+          className="icon toggle-icon"
         />
       </div>
-      <p className="sm:text-lg text-primary pt-2 pb-2 sm:pb-6">
-        {getAllLabel()}
-      </p>
+      <p className="selected-filters">{getAllLabel()}</p>
 
       {selectedCheckboxes.length > 0 && (
-        <button
-          onClick={handleUnselectAll}
-          className="text-[#BFC8CD] underline pt-2 sm:pt-6"
-        >
+        <button onClick={handleUnselectAll} className="unselect-btn">
           Unselect All
         </button>
       )}
 
-      <ul className="subList flex flex-col gap-y-2 sm:gap-y-6 text-primary">
+      <ul className="subList hidden">
         {options.map((option) => (
           <li key={option}>
-            <label className="relative flex gap-2 items-center text-sm sm:text-base">
+            <label>
               <input
                 className="custom-checkbox"
                 type="checkbox"

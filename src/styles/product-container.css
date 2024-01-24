@@ -1,0 +1,23 @@
+main {
+	position: relative;
+}
+
+.product-container {
+	display: flex;
+	padding: 1rem;
+	gap: 1rem;
+}
+
+@media (width > 48rem) {
+	.product-container {
+		padding-right: 3rem;
+		padding-left: 3rem;
+	}
+}
+
+@media (width > 67.5rem) {
+	.product-container {
+		padding-right: 6rem;
+		padding-left: 6rem;
+	}
+}

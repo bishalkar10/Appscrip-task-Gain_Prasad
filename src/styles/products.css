@@ -1,0 +1,12 @@
+.product-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	gap: 1rem;
+	flex: 100;
+}
+
+@media (width > 48rem) {
+	.product-grid {
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	}
+}
