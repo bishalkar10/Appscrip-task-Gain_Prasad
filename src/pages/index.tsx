@@ -32,11 +32,9 @@ export default function Homepage({ products }: { products: ProductsType[] }) {
           content="Upgrade your wardrobe without breaking the bank. Explore affordable, on-trend styles at LOGO"
         />
       </Head>
-      <div className="p-4 md:px-24">
-        <h1 className="uppercase font-Simplon text-primary text-center tracking-[1px] font-normal text-2xl mb-4 md:text-6xl">
-          Discover our products
-        </h1>
-        <p className="md:text-[22px] text-primary block max-w-[721px] mx-auto text-center font-normal md:leading-10">
+      <div className="home">
+        <h1 className="">Discover our products</h1>
+        <p className="description">
           Lorem ipsum dolor sit amet consectetur. Amet est posuere rhoncus
           scelerisque. Dolor integer scelerisque nibh amet mi ut elementum
           dolor.
