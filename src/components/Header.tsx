@@ -4,7 +4,6 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight, faBars } from "@fortawesome/free-solid-svg-icons";
 import { Inter } from "next/font/google";
-import "../styles/header.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

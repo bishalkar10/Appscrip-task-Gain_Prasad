@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import RenderFilterList from "./RenderFilterList";
-import "../styles/filter-list-card.css";
 
 export default function FilterListCard() {
   // filters list to be rendered

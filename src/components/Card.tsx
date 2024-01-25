@@ -1,5 +1,4 @@
 import Image from "next/image";
-import "../styles/card.css";
 
 interface CardProps {
   title: string;

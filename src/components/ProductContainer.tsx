@@ -6,7 +6,6 @@ import Products from "./Products";
 import FilterListCard from "./FilterListCard";
 
 import { ProductsType } from "../pages/index";
-import "../styles/product-container.css";
 
 const ProductContainer = ({ products }: { products: ProductsType[] }) => {
   // write type for state

@@ -1,7 +1,6 @@
 import React from "react";
 import { ProductsType } from "../pages/index";
 import Card from "./Card";
-import "../styles/products.css";
 
 interface ProductsProps {
   products: ProductsType[];
